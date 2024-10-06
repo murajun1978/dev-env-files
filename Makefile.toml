@@ -2,10 +2,7 @@
 command = "brew"
 args = ["update"]
 
-[tasks.homebrew_upgrade_cask_and_greedy]
+[tasks.homebrew_upgrade]
 command = "brew"
 args = ["upgrade", "--cask", "--greedy"]
-
-[tasks.homebrew_upgrade]
-run_task = { name = ["homebrew_update", "homebrew_upgrade_cask_and_greedy"] }
-
+dependencies = ["homebrew_update"]
