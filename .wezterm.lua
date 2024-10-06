@@ -12,7 +12,7 @@ config.background = {
     },
     repeat_x = 'Mirror',
     hsb = {
-      brightness = 0.1
+      brightness = 0.01
     },
     attachment = { Parallax = 0.1 },
   }
