@@ -17,3 +17,5 @@
   ck = checkout
   br = branch
   rb = rebase
+[init]
+	defaultBranch = main
