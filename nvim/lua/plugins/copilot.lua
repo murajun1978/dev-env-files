@@ -1,4 +1,12 @@
 return {
-  "github/copilot.vim",
-  lazy=false,
+  "zbirenbaum/copilot.lua",
+  lazy = false,
+  cmd = {
+    "Copilot",
+  },
+  config = function()
+    local conform = require("copilot")
+
+    conform.setup({})
+  end,
 }
