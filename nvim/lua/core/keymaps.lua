@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 
 local keymap = vim.keymap
 
@@ -14,3 +15,9 @@ keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" 
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
+keymap.set({ "n", "v" }, "<LocalLeader>ca", "<cmd>CodeCompanionActions<cr>", { desc = "Open the Action Palette", noremap = true, silent = true })
+keymap.set({ "n", "v" }, "<LocalLeader>cc", "<cmd>CodeCompanionChat Toggle<cr>", { desc = "Toggle a chat buffer", noremap = true, silent = true })
+keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { desc = "Add visually selected chat to the current chat buffer", noremap = true, silent = true })
+
+-- Expand 'cc' into 'CodeCompanion' in the command line
+vim.cmd([[cab cc CodeCompanion]])
