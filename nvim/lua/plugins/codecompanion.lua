@@ -22,7 +22,7 @@ return {
           return require("codecompanion.adapters").extend("copilot", {
             schema = {
               model = {
-                default = "claude-3.7-sonnet-thought",
+                default = "gemini-2.5-pro-preview-03-25",
               },
             },
           })
